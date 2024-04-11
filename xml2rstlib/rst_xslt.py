@@ -206,7 +206,7 @@ def main():
     xsltP = os.path.join(os.path.dirname(__file__), XsltNm)
     try:
         xsltF = open(xsltP)
-    except IOError, e:
+    except IOError as e:
         raise Exception("Can't open XSLT file %r: %s" % ( xsltP, e, ))
 
     docutils.core.publish_cmdline(parser=Parser(xsltF, RstText()),
